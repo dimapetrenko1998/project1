@@ -5,17 +5,19 @@
 @import "all.scss";
 
 
-
-
-
-
 $blue: #4d97a3;
 $green: #00d089;
 
+$tablet: 768px;
+$desktop: 1024px;
+
 #header{
-	background:$blue;
-	padding: 20px 10px 20px 40px;
-    font-size: 60px;
+	background: #4d97a3;
+    padding: 10px 5px;
+    font-size: 30px;
+    @media screen and (max-width: 1024px) and (min-width: 768px){
+        padding-left: 50px;
+    }
 }
 
 .logo{
@@ -31,22 +33,37 @@ $green: #00d089;
 }
 
 .tagline{
-	position: absolute;
+    position: absolute;
     top: 11%;
-    font-size: 60px;
+    font-size: 20px;
     left: 5%;
     font-family: "HelveticaLTStd-Blod";
+    @media screen and (max-width: 767px) and (min-width: 425px){
+        left: 15%;
+    }
+    @media screen and (max-width: 1024px) and (min-width: 768px){
+        font-size: 40px;
+        left: 0;
+        margin: 26px 113px;
+    }
 }
 
 .btn-banner{
-	background: none;
-    padding: 10px 50px;
-    font-size: 70px;
+    background: none;
+    padding: 10px 30px;
+    font-size: 18px;
     top: 17%;
     left: 26%;
     border: 3px solid #afb1b4;
     border-radius: 7px;
     font-family: "HelveticaLTStd-Light";
+    @media screen and (max-width: 1024px) and (min-width: 768px){
+        padding: 10px 46px;
+        font-size: 34px;
+        top: 25%;
+        left: 30%;
+ 
+    }
 }
 
 .slick-dots{
@@ -54,7 +71,6 @@ $green: #00d089;
 }
 
 .learn{
-	margin: 70px 10px;
     color: #6d707a;
     text-align: center;
     h2{
@@ -66,15 +82,15 @@ $green: #00d089;
 }
 
 .changes{
-	font-size: 150px;
-    margin: 10px 59px;
+    font-size: 60px;
+    margin: 5px 17px;
     color: #5eb6c4;
 }
 
 .testimonial{
 	background: $green;
 	text-align: center;
-	margin: 10px;
+	margin: 10px 0;
 	p{
 		color: #fff;
     	padding: 0 15px 40px 15px;
@@ -83,8 +99,9 @@ $green: #00d089;
 }
 
 .testimonial-top{
+    position: relative;
 	margin: 10px;
-    padding: 50px 0;
+    padding: 30px 0;
     img{
     	width: 35%;
     }
@@ -97,38 +114,74 @@ $green: #00d089;
     	font-family: "HelveticaLTStd-Bold";
     }
     .quote{
-    	color: #58daa5;
-	    font-size: 254px;
-	    vertical-align: top;
-	    position: absolute;
-	    right: 20%;
-	    bottom: 14%;
+        color: #58daa5;
+        font-size: 100px;
+        vertical-align: top;
+        position: absolute;
+        right: 18%;
+        bottom: 10%;
+        @media screen and (max-width: 1024px) and (min-width: 768px){
+            right: 27%;
+            bottom: 47%;
+         }
     }
 }
 
 iframe{
     	width: 100%;
+        margin: 0;
 }
 
+.contact{
+    position: relative;
+}
 
 #form{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+     @media screen and (max-width: 1024px) and (min-width: 768px){
+        top: 0%;
+        border: 100px solid #fff;
+        border-radius: 50%;
+        width: 30%;
+        background: #fff;
+     }
     input{
-        display: block;
-	    padding: 40px;
-	    margin: 25px;
-	    border: 1px solid;
-	    font-size: 40px;
-
+    padding: 10px;
+    margin: 5px 0;
+    border: 3px solid #d8d8d8;
+    @media screen and (max-width: 1024px) and (min-width: 768px){
+        font-size: 20px;
+        }
     }
     textarea{
-	    display: block;
-	    padding: 36px 122px 0px 33px;
-	    margin: 25px;
-	    border: 1px solid;
-	    font-size: 40px;
-	    resize: none;
+        display: block;
+        padding: 10px 32px 0px 10px;
+        margin: 5px 0;
+        border: 3px solid #d8d8d8;
+        resize: none;
+        @media screen and (max-width: 1024px) and (min-width: 768px){
+            font-size: 20px;
+        }
     }
     .check{
-    	font-size: 30px;
+        font-size: 40px;
+        border-radius: 50%;
+        background: $green;
+        padding: 20px;
+        color: white;
+        margin-left: 50px;
     }
 }
+
+#footer{
+    background: $green;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 17px 0px;
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+}
+
